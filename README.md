@@ -12,6 +12,17 @@
 - 设置保存在当前浏览器的 localStorage 中，支持 JSON 备份导入导出。
 - 适配桌面和手机布局。
 
+## 原站油猴脚本
+
+以下脚本用于原版 [0x3.com](https://0x3.com/)，在搜索框加载后通过原站菜单切换默认搜索引擎，仍可手动选择其他引擎。
+
+| 默认引擎 | 脚本源码 | 安装链接 |
+| --- | --- | --- |
+| Google | [0x3-default-google.user.js](userscripts/0x3-default-google.user.js) | [安装 Google 版本](https://raw.githubusercontent.com/ChambersXDU/0x3/main/userscripts/0x3-default-google.user.js) |
+| 必应 | [0x3-default-bing.user.js](userscripts/0x3-default-bing.user.js) | [安装必应版本](https://raw.githubusercontent.com/ChambersXDU/0x3/main/userscripts/0x3-default-bing.user.js) |
+
+在浏览器中启用 Tampermonkey（油猴），打开对应安装链接并安装，然后刷新 `0x3.com`。如果浏览器仅显示代码，可将全文复制到油猴的新建脚本中保存。两个版本任选其一，不要同时启用，以免相互切换搜索引擎。这些脚本只匹配 `0x3.com`，不匹配本项目部署到其他域名的网站。
+
 ## 本地运行
 
 需要 Python 3，在项目目录运行：
@@ -39,6 +50,9 @@ dist/
   icons.json       网站图标
   assets/          搜索图标、标志与横幅
   _redirects       静态托管路由规则
+userscripts/
+  0x3-default-google.user.js  原站默认 Google 搜索
+  0x3-default-bing.user.js    原站默认必应搜索
 preview.py         本地预览服务
 ```
 
